@@ -1,0 +1,37 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+.logo {
+  width: 45vw;
+  padding-left: 30%;
+  padding-top: 1rem;
+}
+.form {
+  padding: 0 1rem;
+  &__container {
+    display: flex;
+    padding-top: 1rem;
+    &--input {
+      width: 100%;
+      height: 2rem;
+      background-color: $alabaster;
+      border: 0.1rem $mercury solid;
+      border-radius: 0.3rem;
+      padding-left: 1rem;
+    }
+    &--picture {
+      width: 4rem;
+      clip-path: circle(35% at 40% 50%);
+    }
+  }
+
+  &__button {
+    width: 100%;
+    margin-top: 1rem;
+    height: 2.5rem;
+    color: white;
+    background-color: $brainflix-blue;
+    border: 0.1rem $brainflix-blue solid;
+    border-radius: 0.3rem;
+  }
+}
