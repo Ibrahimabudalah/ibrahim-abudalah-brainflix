@@ -1,37 +1,76 @@
 @use "../../styles/partials/colors" as *;
 @use "../../styles/partials/fonts" as *;
 @use "../../styles/partials/mixins" as *;
-.logo {
-  width: 45vw;
-  padding-left: 30%;
-  padding-top: 1rem;
-}
-.form {
-  padding: 0 1rem;
+
+.header {
+  padding-left: 1rem;
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 3rem;
+  }
+  &__logo {
+    width: 45vw;
+    padding-left: 27%;
+    padding-top: 1.5rem;
+    @include tablet {
+      width: 20vw;
+      padding-left: 3vw;
+    }
+    @include desktop{
+      width: 12vw;
+      height: 5vh;
+      padding-left: 10vw;
+    }
+  }
+
   &__container {
     display: flex;
-    padding-top: 1rem;
-    &--input {
-      width: 100%;
+    align-items: center;
+    padding-top: 1vh;
+    @include tablet {
+      width: 60%;
+      padding-top: 1.5rem;
+    }
+    @include desktop{
+      width: 70%;
+      display: flex;
+      justify-content:flex-end;
+      margin-right: 5vw;
+    }
+    &__input {
+      width: 70%;
       height: 2rem;
       background-color: $alabaster;
       border: 0.1rem $mercury solid;
       border-radius: 0.3rem;
       padding-left: 1rem;
+      @include tablet{
+        width: 90%;
+      }
+      @include desktop{
+        width: 30%;
+      }
     }
-    &--picture {
+    &__picture {
       width: 4rem;
-      clip-path: circle(35% at 40% 50%);
+      clip-path: circle(39% at 50% 50%);
     }
   }
-
   &__button {
-    width: 100%;
-    margin-top: 1rem;
+    width: 95%;
     height: 2.5rem;
+    margin-top: 1rem;
     color: white;
     background-color: $brainflix-blue;
     border: 0.1rem $brainflix-blue solid;
     border-radius: 0.3rem;
+    @include tablet{
+      width: 50%;
+      margin: 0;
+    }
+    @include desktop{
+      width: 20%;
+    }
   }
 }
