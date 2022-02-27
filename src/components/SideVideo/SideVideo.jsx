@@ -1,8 +1,11 @@
 import React from "react";
+import './SideVideo.scss';
+
 
 function SideVideos(props) {
   return (
-    <div className="video">
+    <div className="next">
+      <h5>NEXT VIDEOS</h5>
       <img
         src={props.sideVideos[1].image}
         alt={props.sideVideos[1].title}
