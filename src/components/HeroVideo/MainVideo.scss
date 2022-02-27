@@ -10,5 +10,9 @@
             width: 95%;
             padding-left: 1rem;
         }
+        @include desktop{
+            width: 75%;
+            padding-left: 13.5vw;
+        }
     }
 }
