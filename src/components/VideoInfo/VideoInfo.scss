@@ -1,0 +1,34 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+
+.video {
+  color: $brainflix-black;
+  padding-left: 5vw;
+  &__title {
+    font-size: 1.5rem;
+  }
+  &__info {
+      border-bottom: $mercury 0.1rem solid;
+      border-top: $mercury 0.1rem solid;
+      width: 93%;
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      color: $silver;
+      &__views,
+      &__likes {
+        display: flex;
+      }
+      &--margin {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 5vw;color: $silver;
+      }
+    }
+    &__channel{
+        color: $brainflix-black;
+        font-weight: 600;
+    }
+  }
+}
