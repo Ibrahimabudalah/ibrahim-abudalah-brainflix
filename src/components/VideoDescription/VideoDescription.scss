@@ -1,0 +1,12 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+
+
+.description{
+    padding-left: 5vw;
+    color: $brainflix-black;
+    width: 91%;
+    font-size: 0.81rem;
+    padding-top: 1vh;
+}
