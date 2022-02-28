@@ -6,7 +6,8 @@ function SideVideoList({ list, eventHandler }) {
   console.log("sidevideo list",list);
   console.log("sidevideo list eventhandler", eventHandler)
   return (
-    <div>
+    <div className="list">
+      <h4 className="list__header">NEXT VIDEOS</h4>
       {list.map((video) => {
         return (
           <SideVideo

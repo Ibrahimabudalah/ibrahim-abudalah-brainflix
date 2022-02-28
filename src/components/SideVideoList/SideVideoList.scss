@@ -1,0 +1,12 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+
+.list{
+    &__header{
+        color: $silver;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        padding-left: 5vw;
+    }
+}
