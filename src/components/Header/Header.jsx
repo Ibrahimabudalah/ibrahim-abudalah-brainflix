@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 function Header() {
   return (
     <header className="header">
-      <Link to= "/">
+      <Link to="/">
         <img src={logo} alt="BrainFlix logo" className="header__logo" />
       </Link>
 
@@ -22,7 +22,9 @@ function Header() {
           alt="Profile Avatar"
           className="header__container__picture"
         />
-        <button className="header__button">UPLOAD</button>
+        <Link to="/page">
+          <button className="header__button">UPLOAD</button>
+        </Link>
       </div>
     </header>
   );
