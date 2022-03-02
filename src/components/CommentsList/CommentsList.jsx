@@ -4,7 +4,7 @@ import Comment from '../Comment/Comment'
 
 function Comments({comments}) {
   return (
-    <div>
+    <div className='list'>
       {comments.map((comment, like) => {
         return(
           <Comment 

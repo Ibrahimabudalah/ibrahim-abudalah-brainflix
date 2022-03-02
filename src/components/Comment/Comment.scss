@@ -1,0 +1,13 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+
+.comment{
+    &__avatar{
+    max-height: 4rem;
+      max-width: 4rem;
+      margin-top: 1.5rem;
+      clip-path: circle(35% at 40% 50%);
+      background-color: $mercury;
+    }
+}
