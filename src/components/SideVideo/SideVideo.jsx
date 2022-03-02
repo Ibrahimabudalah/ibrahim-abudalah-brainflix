@@ -2,8 +2,8 @@ import React from "react";
 import "./SideVideo.scss";
 
 function SideVideo({ video, eventHandler }) {
-  console.log("SideVideo video", video);
-  console.log("sidevideo eventHandler", eventHandler);
+  // console.log("SideVideo video", video);
+  // console.log("sidevideo eventHandler", eventHandler);
   const clickHandler = (e, id) => {
     eventHandler(id);
   };

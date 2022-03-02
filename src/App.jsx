@@ -9,6 +9,8 @@ import VideoDescription from "./components/VideoDescription/VideoDescription";
 import SideVideos from "./components/SideVideo/SideVideo";
 import SideVideosList from "./components/SideVideoList/SideVideoList";
 import CommentsForm from "./components/CommentsForm/CommentsForm";
+import Comment from "./components/Comment/Comment";
+import CommentsList from "./components/CommentsList/CommentsList";
 
 class App extends React.Component {
   state = {
@@ -26,7 +28,7 @@ class App extends React.Component {
 
   render() {
     const filteredVideos = this.state.videoList.filter(video => video.id !== this.state.videoDetails.id)
-    console.log("app filter videos", filteredVideos)
+    // console.log("app filter videos", filteredVideos)
     return (
       <div className="App">
         <header className="App-header">
@@ -34,7 +36,10 @@ class App extends React.Component {
           <MainVideo videos={this.state.videoDetails} />
           <VideoInfo videos={this.state.videoDetails} />
           <VideoDescription videos={this.state.videoDetails} />
-          <CommentsForm/>
+          <CommentsForm comments={this.state.videoDetails.comments} />
+          {/* <Comment comments={this.state.videoDetails} /> */}
+          <CommentsList comments={this.state.videoDetails.comments} />
+          
           {/* <SideVideos
             sideVideos={this.selectedVideo}
             eventHandler={this.updateSelectedVideo}
