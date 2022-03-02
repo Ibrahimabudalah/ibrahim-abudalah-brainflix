@@ -1,0 +1,52 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+
+.form {
+  padding-left: 5vw;
+  &__header {
+    color: $brainflix-black;
+    font-size: 0.75rem;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items:flex-start;
+    margin-right: 5vw;
+    &__image {
+      max-height: 4rem;
+      max-width: 4rem;
+      margin-top: 1.5rem;
+      clip-path: circle(35% at 40% 50%);
+    }
+    &__field {
+      display: flex;
+      flex-direction: column;
+      &__header {
+        color: $silver;
+        font-size: 0.813rem;
+        font-weight: 400;
+        margin: 0.4vh;
+      }
+      &__input {
+        width: 65vw;
+        height: 14vh;
+        font-size: 0.813rem;
+        background-color: $alabaster;
+        border: 0.1rem $mercury solid;
+        border-radius: 0.3rem;
+        &::placeholder{
+            padding-left: 3vw;
+        }
+      }
+      &__button {
+        height: 5vh;
+        color: white;
+        background-color: $brainflix-blue;
+        border: 0.1rem $brainflix-blue solid;
+        border-radius: 0.3rem;
+        margin-top: 2vh;
+      }
+    }
+  }
+}

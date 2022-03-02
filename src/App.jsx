@@ -8,6 +8,7 @@ import VideoInfo from "./components/VideoInfo/VideoInfo";
 import VideoDescription from "./components/VideoDescription/VideoDescription";
 import SideVideos from "./components/SideVideo/SideVideo";
 import SideVideosList from "./components/SideVideoList/SideVideoList";
+import CommentsForm from "./components/CommentsForm/CommentsForm";
 
 class App extends React.Component {
   state = {
@@ -33,6 +34,7 @@ class App extends React.Component {
           <MainVideo videos={this.state.videoDetails} />
           <VideoInfo videos={this.state.videoDetails} />
           <VideoDescription videos={this.state.videoDetails} />
+          <CommentsForm/>
           {/* <SideVideos
             sideVideos={this.selectedVideo}
             eventHandler={this.updateSelectedVideo}
