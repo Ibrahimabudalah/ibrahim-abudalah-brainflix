@@ -26,7 +26,7 @@ class Home extends React.Component {
     const filteredVideos = this.state.videoList.filter(
       (video) => video.id !== this.state.videoDetails.id
     );
-    return (
+    return ( 
       <div>
         <MainVideo videos={this.state.videoDetails} />
         <VideoInfo videos={this.state.videoDetails} />
@@ -44,7 +44,7 @@ class Home extends React.Component {
           eventHandler={this.updateSelectedVideo}
         />
       </div>
-    );
+     );
   }
 }
 
