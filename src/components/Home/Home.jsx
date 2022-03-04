@@ -8,44 +8,46 @@ import CommentsList from "../CommentsList/CommentsList";
 import SideVideosList from "../SideVideoList/SideVideoList";
 import videoDetails from "../../data/video-details.json";
 import videosList from "../../data/videos.json";
+import api from '../../utils/api';
 
 class Home extends React.Component {
   state = {
-    videoDetails: videoDetails[0],
-    videoList: videosList,
+    videoList: null,
+    clickedVideo: null,
   };
 
-  updateSelectedVideo = (id) => {
-    let selectedVideo = videoDetails.find((video) => video.id === id);
-
-    this.setState({
-      videoDetails: selectedVideo,
+  componentDidMount() {
+    api.getAll().then((res) => {
+      console.log(api.getAll);
+      this.setState({
+        videoList: res.data,
+      });
+      api.getVideoById(this.state.videoList[0].id).then((res) => {
+        console.log(res.data);
+        this.setState({
+          clickedVideo: res.data,
+        });
+      });
     });
-  };
+  }
 
   render() {
     const filteredVideos = this.state.videoList.filter(
       (video) => video.id !== this.state.videoDetails.id
     );
-    return ( 
+    return (
       <div>
-        <MainVideo videos={this.state.videoDetails} />
+        {/* <MainVideo videos={this.state.videoDetails} />
         <VideoInfo videos={this.state.videoDetails} />
         <VideoDescription videos={this.state.videoDetails} />
         <CommentsForm comments={this.state.videoDetails.comments} />
-        {/* <Comment comments={this.state.videoDetails} /> */}
         <CommentsList comments={this.state.videoDetails.comments} />
-
-        {/* <SideVideos
-            sideVideos={this.selectedVideo}
-            eventHandler={this.updateSelectedVideo}
-        /> */}
         <SideVideosList
           list={filteredVideos}
           eventHandler={this.updateSelectedVideo}
-        />
+        /> */}
       </div>
-     );
+    );
   }
 }
 
