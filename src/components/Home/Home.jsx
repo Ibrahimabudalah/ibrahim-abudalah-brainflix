@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import MainVideo from "../MainVideo/MainVideo";
+import MainVideo from "../HeroVideo/HeroVideo";
 import VideoInfo from "../VideoInfo/VideoInfo";
 import VideoDescription from "../VideoDescription/VideoDescription";
 import CommentsForm from "../CommentsForm/CommentsForm";
