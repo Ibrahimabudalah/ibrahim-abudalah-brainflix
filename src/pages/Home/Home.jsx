@@ -1,8 +1,12 @@
 import { Component } from "react";
+import DefaultVideo from "../../components/DefaultVideo/DefaultVideo";
 
-class Home extends ({ Component }) {
-  render() {
-    return <div> </div>;
-  }
+function Home({ selectedVideo }) {
+//   console.log(this.props.selectedVideo);
+  return (
+    <div>
+      <DefaultVideo selectedVideo={selectedVideo} />
+    </div>
+  );
 }
 export default Home;

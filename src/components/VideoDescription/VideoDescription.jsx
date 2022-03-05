@@ -1,10 +1,10 @@
 import React from 'react'
 import './VideoDescription.scss';
 
-function VideoDescription(props) {
+function VideoDescription({ selectedVideo }) {
   return (
-    <div className='description'>
-      <p>{props.videos.description}</p>
+    <div className="description">
+      <p>{selectedVideo.description}</p>
     </div>
   );
 }

@@ -1,13 +1,14 @@
 import React from 'react'
-import './MainVideo.scss';
+import './HeroVideo.scss';
 
 
-function Video(props) {
+function Video(video) {
+  console.log(video);
   return (
-    <section className='hero'>
-      <video poster={props.videos.image} controls className='hero__video'></video>
+    <section className="hero">
+      <video poster={video.video.selectedVideo.image} controls className="hero__video"></video>
     </section>
-    )
+  );
 }
 
 export default Video
