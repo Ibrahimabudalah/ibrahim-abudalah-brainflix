@@ -2,10 +2,11 @@ import React from "react";
 import "./CommentsForm.scss";
 import image from "../../assets/images/Mohan-muruge.jpg";
 
-function CommentsForm(comments) {
+function CommentsForm({comments}) {
+  console.log(comments);
   return (
     <div className="form">
-      <h5 className="form__header">{comments.comments.length + " Comments"}</h5>
+      <h5 className="form__header">{comments.length + " Comments"}</h5>
       <div className="form__container">
         <img src={image} alt="" className="form__container__image" />
         <div className="form__container__field">

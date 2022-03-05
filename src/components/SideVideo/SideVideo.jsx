@@ -7,6 +7,7 @@ function SideVideo({ video, eventHandler }) {
   const clickHandler = (e, id) => {
     eventHandler(id);
   };
+  // /video.id
   return (
     <div
       onClick={(e) => {

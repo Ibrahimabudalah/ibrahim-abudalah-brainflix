@@ -3,6 +3,7 @@ import './Comment.scss';
 
 function Comment({comment}) {
     const commentsDate = new Date(parseInt(comment.timestamp));
+    console.log(comment);
   return (
     <div className="comment">
       <div className="comment__avatar"></div>
