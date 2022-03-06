@@ -1,5 +1,5 @@
 import React from "react";
-import "./Page.scss";
+import "./Upload.scss";
 
 class Page extends React.Component {
   state = {
