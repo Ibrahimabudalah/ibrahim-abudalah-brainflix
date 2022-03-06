@@ -10,11 +10,39 @@ function Header() {
     <header className="header">
       <img src={logo} alt="BrainFlix logo" className="header__logo" />
       <div className="header__container">
-        <input type="text" placeholder="Search" className="header__container__input" />
-        <img src={searchLogo} alt="search" className="header__container__input__search" />
-        <img src= {profilePic} alt="Profile Avatar" className="header__container__picture"/>
+        <input
+          type="text"
+          placeholder="Search"
+          className="header__container__input"
+        />
+        <button className="header__container__button">
+          <img
+            src={uploadLogo}
+            alt="upload"
+            className="header__container__button__upload"
+          />{" "}
+          UPLOAD
+        </button>
+        <img
+          src={profilePic}
+          alt="Profile Avatar"
+          className="header__container__avatar"
+        />
+        <img
+          src={searchLogo}
+          alt="search"
+          className="header__container__input__search"
+        />
+        <img
+          src={profilePic}
+          alt="Profile Avatar"
+          className="header__container__picture"
+        />
       </div>
-        <button className="header__button"><img src={uploadLogo} alt="upload" className="header__button__upload" /> UPLOAD</button>
+      <button className="header__button">
+        <img src={uploadLogo} alt="upload" className="header__button__upload" />{" "}
+        UPLOAD
+      </button>
     </header>
   );
 }
