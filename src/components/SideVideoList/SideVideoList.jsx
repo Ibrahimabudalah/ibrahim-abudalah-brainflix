@@ -2,7 +2,8 @@ import React from "react";
 import "./SideVideoList.scss";
 import SideVideo from "../SideVideo/SideVideo";
 
-function SideVideoList({ list, selectedVideo }) {
+
+function SideVideoList({ list }) {
   // console.log("sidevideo list", list);
   // console.log("sidevideo list eventhandler", eventHandler)
   return (
@@ -12,7 +13,6 @@ function SideVideoList({ list, selectedVideo }) {
         return (
           <SideVideo
             video={video}
-            selectedVideo={selectedVideo}
             key={video.id}
           />
         );

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./SideVideo.scss";
 
-function SideVideo({ video, selectedVideo, key}) {
+function SideVideo({ video }) {
   // console.log("SideVideo video", video);
   // console.log("sidevideo eventHandler", eventHandler);
   // const clickHandler = (e, id) => {

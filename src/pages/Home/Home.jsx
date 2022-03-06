@@ -16,30 +16,34 @@ class Home extends Component {
   };
 
   getVideo = (videoId) => {
-      api.getVideoById(this.state.videoList[0].id).then((res) => {
+      api.getVideoById(videoId || this.state.videoList[0].id).then((res) => {
         this.setState({
           selectedVideo: res.data,
         });
       });
+      // console.log(videoId);
   }
   getAllVideos = () => {
+    const videoId = this.props.match.params.id;
+    console.log(videoId);
       api.getAll().then((res) => {
         this.setState({
           videoList: res.data,
         });
-        this.getVideo(res.data[0].id)
+        this.getVideo(videoId || res.data[0].id)
       });
   }
   componentDidMount() {
       this.getAllVideos()
+
     // console.log("mount");
   }
   componentDidUpdate(prevProps, prevState) {
     //   console.log(prevProps, this.props);
-    //   console.log(this.props);
+      console.log(this.props.match);
       if (prevProps.match.params.id !== this.props.match.params.id) {
           this.getVideo(this.props.match.params.id || this.state.videoList[0].id)
-        //   console.log("update");
+          console.log("update");
     }
   }
 
@@ -67,8 +71,7 @@ class Home extends Component {
         <VideoDescription video={selectedVideo} />
         <CommentsForm comments={selectedVideo.comments} />
         <CommentsList comments={selectedVideo.comments} />
-        <SideVideosList 
-        list={filteredVideos} />
+        <SideVideosList list={filteredVideos} />
       </div>
     );
 }

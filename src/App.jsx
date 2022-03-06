@@ -18,8 +18,9 @@ class App extends React.Component {
         <Header />
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route path="/videos/:id" render={(routerProps) => <Home {...routerProps}/>} />
           <Route exact path="/upload" component={Upload} />
-          <Route path="/:id" render={(routerProps) => <Home {...routerProps}/>} />
+          <Route render={() => <h1>PAGE NOT FOUND</h1>} />
         </Switch>
       </BrowserRouter>
     );
