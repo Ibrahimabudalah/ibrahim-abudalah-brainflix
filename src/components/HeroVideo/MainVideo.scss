@@ -13,7 +13,7 @@
   &__video {
     width: 100%;
     @include tablet {
-      width: 90%;
+      width: 88vw;
       padding-left: 5vw;
     }
     @include desktop {
