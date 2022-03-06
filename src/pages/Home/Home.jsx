@@ -50,8 +50,11 @@ class Home extends Component {
       const {selectedVideo, videoList} = this.state
 
 
-    //   const filteredVideos = videoList.filter((video) => 
-    //   {return video.id !== selectedVideo.id});
+      // const filteredVideos = videoList.filter((video) => 
+      // {return video.id !== selectedVideo.id});
+      const filteredVideos = selectedVideo
+      ? videoList.filter(video =>
+        video.id !== selectedVideo.id) : videoList;
     // console.log(selectedVideo.comments);
     // console.log(videoList[1].channel);
     if(!this.state.selectedVideo || !this.state.videoList){
@@ -64,9 +67,8 @@ class Home extends Component {
         <VideoDescription video={selectedVideo} />
         <CommentsForm comments={selectedVideo.comments} />
         <CommentsList comments={selectedVideo.comments} />
-        {/* <SideVideosList 
-        list={filteredVideos} 
-        selectedVideo={selectedVideo} /> */}
+        <SideVideosList 
+        list={filteredVideos} />
       </div>
     );
 }
