@@ -14,33 +14,51 @@
   }
   &__info {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-   &__container{
-     display: flex;
-     justify-content: center;
-     flex-direction: column;
-     border-top: $mercury 0.1rem solid;
-     border-bottom: $mercury 0.1rem solid;
-     width: 50%;
-     @include tablet{
-       border-top: 0;
-       flex-direction: row;
-       justify-content: space-evenly;
-       align-items: center;
-     }
-     &__views, &__likes{
-       width: 70%;
-       display: flex;
-       justify-content: space-between;
-     }
+    // align-items: center;
+    border-top: $mercury 0.1rem solid;
+    border-bottom: $mercury 0.1rem solid;
+    @include tablet {
+      border-top: 0;
     }
-    &__text{
-      color: $silver;
-      font-size: .8125rem;
+    &__icons {
+      width: 6vw;
     }
-    &__channel{
-      color: $brainflix-black;
-      font-weight: 400;
+    &__component {
+      display: flex;
+      flex-direction: row;
+      margin-left: 5vw;
+      &__views,
+      &__likes {
+        display: flex;
+        justify-content: space-between;
+      }
+      &-one {
+        @include tablet {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 30vw;
+        }
+      }
+      &-two {
+        color: $silver;
+        display: flex;
+        flex-direction: column;
+        &__views {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+        }
+        &__likes {
+          display: flex;
+          justify-content: space-evenly;
+        }
+        @include tablet {
+          flex-direction: row;
+        }
+      }
     }
   }
 }
