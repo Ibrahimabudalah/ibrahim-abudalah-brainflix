@@ -3,22 +3,22 @@
 @use "../../styles/partials/mixins" as *;
 
 .hero {
+    text-align: center;
+    background-color: black;
+    width: 100%;
     @include tablet{
-        background-color: black;
-        height: 45.3vh;
-    }
-    @include desktop{
-        height: 63.6vh;
+      padding: 0 -2.25rem;
     }
   &__video {
     width: 100%;
+    max-height: 35rem;
     @include tablet {
-      width: 88vw;
-      padding-left: 5vw;
+      width: 90%;
+      padding-left: 0 3.25vw;
     }
     @include desktop {
       width: 75%;
-      padding-left: 14vw;
+      padding-left: 3.25vw;
     }
   }
 }
