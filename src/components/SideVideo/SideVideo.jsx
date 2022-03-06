@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./SideVideo.scss";
 
 function SideVideo({ video, selectedVideo, key}) {
@@ -9,13 +10,14 @@ function SideVideo({ video, selectedVideo, key}) {
   // };
   // /video.id
   return (
-    <div
-      onClick={() => {
-        selectedVideo(key);
-      }}
-      // id={video.id}
-      // className="videos"
-    >
+    // <div
+    //   onClick={() => {
+    //     selectedVideo(key);
+    //   }}
+    //   // id={video.id}
+    //   // className="videos"
+    // >
+    <Link to={`/videos/${video.id}`}>
       <div className="videos__container">
         <img
           src={video.image}
@@ -28,7 +30,7 @@ function SideVideo({ video, selectedVideo, key}) {
           <p className="videos__container__info__channel">{video.channel}</p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 

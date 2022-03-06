@@ -4,6 +4,7 @@ import logo from "../../assets/logos/BrainFlix-logo.svg";
 import uploadLogo from "../../assets/icons/upload.svg";
 import searchLogo from "../../assets/icons/search.svg";
 import profilePic from "../../assets/images/Mohan-muruge.jpg";
+import upload  from "../../pages/Upload/Upload";
 import { Link } from "react-router-dom";
 
 function Header() {
@@ -19,14 +20,17 @@ function Header() {
           placeholder="Search"
           className="header__container__input"
         />
-        <button className="header__container__button">
-          <img
-            src={uploadLogo}
-            alt="upload"
-            className="header__container__button__upload"
-          />{" "}
-          UPLOAD
-        </button>
+        <Link to="/upload">
+          <button className="header__container__button">
+            <img
+              src={uploadLogo}
+              alt="upload"
+              className="header__container__button__upload"
+            />{" "}
+            UPLOAD
+          </button>
+        </Link>
+
         <img
           src={profilePic}
           alt="Profile Avatar"
