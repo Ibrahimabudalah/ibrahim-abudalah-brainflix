@@ -3,7 +3,7 @@ import "./CommentsForm.scss";
 import image from "../../assets/images/Mohan-muruge.jpg";
 
 function CommentsForm({comments}) {
-  console.log(comments);
+  // console.log(comments.length);
   return (
     <div className="form">
       <h5 className="form__header">{comments.length + " Comments"}</h5>

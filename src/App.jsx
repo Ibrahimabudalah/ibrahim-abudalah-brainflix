@@ -21,10 +21,6 @@ class App extends React.Component {
           <Route exact path="/upload" component={Upload} />
           <Route path="/:id" render={(routerProps) => <Home {...routerProps}/>} />
         </Switch>
-        {/* <SideVideosList
-          // list={filteredVideos}
-          // eventHandler={this.updateSelectedVideo}
-        /> */}
       </BrowserRouter>
     );
   }

@@ -2,8 +2,8 @@ import React from 'react'
 import './CommentsList.scss';
 import Comment from '../Comment/Comment'
 
-function Comments({comments}) {
-  console.log(comments);
+function CommentsList({comments}) {
+  // console.log(comments);
   return (
     <div className='list'>
       {comments.map((comment, index) => {
@@ -18,4 +18,4 @@ function Comments({comments}) {
   )
 }
 
-export default Comments
+export default CommentsList

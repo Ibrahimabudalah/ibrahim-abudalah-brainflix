@@ -7,11 +7,12 @@ import VideoDescription from "../../components/VideoDescription/VideoDescription
 import CommentsForm from "../../components/CommentsForm/CommentsForm";
 import CommentsList from "../../components/CommentsList/CommentsList";
 import Comment from "../../components/Comment/Comment";
+import SideVideosList from "../../components/SideVideoList/SideVideoList";
 
 class Home extends Component {
   state = {
-    videoList: [],
-    selectedVideo: [],
+    videoList: null,
+    selectedVideo: null,
   };
 
   getVideo = (videoId) => {
@@ -35,7 +36,7 @@ class Home extends Component {
   }
   componentDidUpdate(prevProps, prevState) {
     //   console.log(prevProps, this.props);
-    //   console.log("update");
+    //   console.log(this.props);
       if (prevProps.match.params.id !== this.props.match.params.id) {
           this.getVideo(this.props.match.params.id || this.state.videoList[0].id)
         //   console.log("update");
@@ -43,21 +44,29 @@ class Home extends Component {
   }
 
   render() {
-    // const filteredVideos = this.state.videoList.filter(
-    //       (video) => video.id !== this.state.selectedVideo.id
-    //     );
-    // console.log(this.state);
-    const {selectedVideo, videoList} = this.state
+      // console.log(this.state.videoList);
+      
+      // console.log(this.state);
+      const {selectedVideo, videoList} = this.state
+
+
+    //   const filteredVideos = videoList.filter((video) => 
+    //   {return video.id !== selectedVideo.id});
     // console.log(selectedVideo.comments);
-    console.log(selectedVideo);
+    // console.log(videoList[1].channel);
+    if(!this.state.selectedVideo || !this.state.videoList){
+        return <h1></h1>
+    }
     return (
       <div>
-       <HeroVideo video={selectedVideo.image} />
+        <HeroVideo video={selectedVideo.image} />
         <VideoInfo videoInfo={selectedVideo} />
         <VideoDescription video={selectedVideo} />
-        {/* <CommentsForm comments={selectedVideo.comments} /> */}
+        <CommentsForm comments={selectedVideo.comments} />
         <CommentsList comments={selectedVideo.comments} />
-        {/* <Comment /> */}
+        {/* <SideVideosList 
+        list={filteredVideos} 
+        selectedVideo={selectedVideo} /> */}
       </div>
     );
 }

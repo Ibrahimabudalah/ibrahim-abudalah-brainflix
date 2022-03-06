@@ -1,20 +1,20 @@
 import React from "react";
 import "./SideVideo.scss";
 
-function SideVideo({ video, eventHandler }) {
+function SideVideo({ video, selectedVideo, key}) {
   // console.log("SideVideo video", video);
   // console.log("sidevideo eventHandler", eventHandler);
-  const clickHandler = (e, id) => {
-    eventHandler(id);
-  };
+  // const clickHandler = (e, id) => {
+  //   eventHandler(id);
+  // };
   // /video.id
   return (
     <div
-      onClick={(e) => {
-        clickHandler(e, video.id);
+      onClick={() => {
+        selectedVideo(key);
       }}
-      id={video.id}
-      className="videos"
+      // id={video.id}
+      // className="videos"
     >
       <div className="videos__container">
         <img
