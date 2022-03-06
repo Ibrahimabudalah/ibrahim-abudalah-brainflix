@@ -3,21 +3,26 @@
 @use "../../styles/partials/mixins" as *;
 
 .header {
-  padding-left: 1rem;
+  padding-left: 1.3vw;
+  padding-right: 1.3vw;
   @include tablet {
     display: flex;
     justify-content: space-between;
-    margin-right: 3rem;
+    align-items: center;
+    padding-left: 2vw;
+    padding-right: 2vw;
   }
   &__logo {
     width: 45vw;
+    max-height: 2.8vh;
     padding-left: 27%;
     padding-top: 1.5rem;
     @include tablet {
       width: 20vw;
-      padding-left: 3vw;
+      max-height: 2.8vh;
+      padding-left: 0;
     }
-    @include desktop{
+    @include desktop {
       width: 12vw;
       height: 5vh;
       padding-left: 10vw;
@@ -27,50 +32,100 @@
   &__container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding-top: 1vh;
     @include tablet {
-      width: 60%;
-      padding-top: 1.5rem;
+      width: 70%;
+      // padding-top: 1.5rem;
+      justify-content: space-between;
     }
-    @include desktop{
+    @include desktop {
       width: 70%;
       display: flex;
-      justify-content:flex-end;
+      justify-content: flex-end;
       margin-right: 5vw;
     }
     &__input {
-      width: 70%;
+      width: 62vw;
       height: 2rem;
       background-color: $alabaster;
       border: 0.1rem $mercury solid;
       border-radius: 0.3rem;
-      padding-left: 1rem;
-      @include tablet{
-        width: 90%;
+      padding-left: 2rem;
+      &__search {
+        position: absolute;
+        left: 1.5rem;
+        @include tablet {
+          left: 33vw;
+        }
       }
-      @include desktop{
+      &::placeholder {
+        color: $brainflix-black;
+      }
+      @include tablet {
+        // width: 50%;
+      }
+      @include desktop {
         width: 30%;
       }
     }
     &__picture {
-      width: 4rem;
-      clip-path: circle(39% at 50% 50%);
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 50%;
+      @include tablet {
+        display: none;
+      }
+    }
+    &__button {
+      display: none;
+      @include tablet {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 50%;
+        height: 2.5rem;
+        // margin-top: 1rem;
+        color: white;
+        background-color: $brainflix-blue;
+        border: 0.1rem $brainflix-blue solid;
+        border-radius: 0.3rem;
+      }
+    }
+    &__avatar {
+      display: none;
+      @include tablet {
+        display: block;
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 50%;
+      }
     }
   }
   &__button {
-    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
     height: 2.5rem;
     margin-top: 1rem;
     color: white;
     background-color: $brainflix-blue;
     border: 0.1rem $brainflix-blue solid;
     border-radius: 0.3rem;
-    @include tablet{
-      width: 50%;
-      margin: 0;
+    &__upload {
+      position: absolute;
+      left: 1.3rem;
+      @include tablet {
+        left: 65vw;
+        display: none;
+      }
     }
-    @include desktop{
-      width: 20%;
+    @include tablet {
+      display: none;
+    }
+    @include desktop {
+      display: none;
     }
   }
 }
