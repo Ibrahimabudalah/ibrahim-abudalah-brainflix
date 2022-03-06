@@ -5,30 +5,42 @@
 .video {
   color: $brainflix-black;
   padding-left: 5vw;
+  padding-right: 5vw;
   &__title {
     font-size: 1.5rem;
+    padding-top: 2.6vh;
+    padding-bottom: 1.8vh;
+    margin: 0;
   }
   &__info {
-      border-bottom: $mercury 0.1rem solid;
-      border-top: $mercury 0.1rem solid;
-      width: 93%;
-    &__container {
-      display: flex;
-      justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+   &__container{
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     border-top: $mercury 0.1rem solid;
+     border-bottom: $mercury 0.1rem solid;
+     width: 50%;
+     @include tablet{
+       border-top: 0;
+       flex-direction: row;
+       justify-content: space-evenly;
+       align-items: center;
+     }
+     &__views, &__likes{
+       width: 70%;
+       display: flex;
+       justify-content: space-between;
+     }
+    }
+    &__text{
       color: $silver;
-      &__views,
-      &__likes {
-        display: flex;
-      }
-      &--margin {
-        display: flex;
-        justify-content: space-between;
-        margin-right: 5vw;color: $silver;
-      }
+      font-size: .8125rem;
     }
     &__channel{
-        color: $brainflix-black;
-        font-weight: 600;
+      color: $brainflix-black;
+      font-weight: 400;
     }
   }
 }
