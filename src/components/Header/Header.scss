@@ -4,6 +4,7 @@
 
 .header {
   padding-left: 1rem;
+  padding-right: 1rem;
   @include tablet {
     display: flex;
     justify-content: space-between;
@@ -11,6 +12,7 @@
   }
   &__logo {
     width: 45vw;
+    max-height: 1.56rem;
     padding-left: 27%;
     padding-top: 1.5rem;
     @include tablet {
@@ -27,6 +29,7 @@
   &__container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding-top: 1vh;
     @include tablet {
       width: 60%;
@@ -44,7 +47,14 @@
       background-color: $alabaster;
       border: 0.1rem $mercury solid;
       border-radius: 0.3rem;
-      padding-left: 1rem;
+      padding-left: 2rem;
+      &__search{
+        position: absolute;
+        left: 1.5rem;
+      }
+      &::placeholder{
+        color: $brainflix-black;
+      }
       @include tablet{
         width: 90%;
       }
@@ -53,18 +63,26 @@
       }
     }
     &__picture {
-      width: 4rem;
-      clip-path: circle(39% at 50% 50%);
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 50%;
     }
   }
   &__button {
-    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
     height: 2.5rem;
     margin-top: 1rem;
     color: white;
     background-color: $brainflix-blue;
     border: 0.1rem $brainflix-blue solid;
     border-radius: 0.3rem;
+    &__upload{
+      position: absolute;
+      left: 1.3rem;
+    }
     @include tablet{
       width: 50%;
       margin: 0;
