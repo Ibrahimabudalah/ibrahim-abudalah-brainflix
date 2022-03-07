@@ -3,129 +3,65 @@
 @use "../../styles/partials/mixins" as *;
 
 .header {
-  padding-left: 1.3vw;
-  padding-right: 1.3vw;
-  @include tablet {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 2vw;
-    padding-right: 2vw;
+  padding-left: 4vw;
+  padding-right: 4vw;
+  padding-bottom: 1.5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include tablet{
+    flex-direction: row;
+    width: 100%;
   }
   &__logo {
-    width: 45vw;
+    width: 40vw;
     max-height: 2.8vh;
-    padding-left: 27%;
-    padding-top: 1.5rem;
-    @include tablet {
-      width: 20vw;
-      max-height: 2.8vh;
-      padding-left: 0;
-    }
-    @include desktop {
-      width: 12vw;
-      height: 5vh;
-      padding-left: 10vw;
+    padding-top: 3vh;
+    padding-bottom: 1vh;
+    @include tablet{
+      width: 18vw;
     }
   }
-
-  &__container {
+  &__container-two {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 1vh;
-    @include tablet {
-      width: 70%;
-      // padding-top: 1.5rem;
-      justify-content: space-between;
-    }
-    @include desktop {
-      width: 70%;
-      display: flex;
-      justify-content: flex-end;
-      margin-right: 5vw;
-    }
+    width: 100%;
     &__input {
-      width: 62vw;
-      height: 2rem;
-      background-color: $alabaster;
+      width: 70%;
+      height: 4vh;
       border: 0.1rem $mercury solid;
       border-radius: 0.3rem;
-      padding-left: 2rem;
-      &__search {
-        position: absolute;
-        left: 1.5rem;
-        @include tablet {
-          left: 33vw;
-        }
-      }
-      &::placeholder {
-        color: $brainflix-black;
-      }
-      @include tablet {
-        // width: 50%;
-      }
-      @include desktop {
-        width: 30%;
+      background-color: $alabaster;
+      padding-left: 5vw;
+      @include tablet{
+        width: 50%;
       }
     }
     &__picture {
       width: 2.25rem;
       height: 2.25rem;
       border-radius: 50%;
-      @include tablet {
-        display: none;
-      }
-    }
-    &__button {
-      display: none;
-      @include tablet {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        width: 50%;
-        height: 2.5rem;
-        // margin-top: 1rem;
-        color: white;
-        background-color: $brainflix-blue;
-        border: 0.1rem $brainflix-blue solid;
-        border-radius: 0.3rem;
-      }
-    }
-    &__avatar {
-      display: none;
-      @include tablet {
-        display: block;
-        width: 2.25rem;
-        height: 2.25rem;
-        border-radius: 50%;
-      }
     }
   }
-  &__button {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+  &__container {
     width: 100%;
-    height: 2.5rem;
-    margin-top: 1rem;
-    color: white;
-    background-color: $brainflix-blue;
-    border: 0.1rem $brainflix-blue solid;
-    border-radius: 0.3rem;
-    &__upload {
-      position: absolute;
-      left: 1.3rem;
-      @include tablet {
-        left: 65vw;
-        display: none;
+    padding-top: 1.5vh;
+    &__button {
+      height: 5vh;
+      width: 100%;
+      color: white;
+      background-color: $brainflix-blue;
+      border: 0.1rem $brainflix-blue solid;
+      border-radius: 0.3rem;
+      display: flex;
+      align-items: center;
+      &__icon{
+        padding-right: 25vw;
       }
-    }
-    @include tablet {
-      display: none;
-    }
-    @include desktop {
-      display: none;
+      @include tablet{
+        width: 50%;
+      }
     }
   }
 }

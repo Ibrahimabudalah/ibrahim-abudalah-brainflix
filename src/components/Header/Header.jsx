@@ -4,7 +4,7 @@ import logo from "../../assets/logos/BrainFlix-logo.svg";
 import uploadLogo from "../../assets/icons/upload.svg";
 import searchLogo from "../../assets/icons/search.svg";
 import profilePic from "../../assets/images/Mohan-muruge.jpg";
-import upload  from "../../pages/Upload/Upload";
+import upload from "../../pages/Upload/Upload";
 import { Link } from "react-router-dom";
 
 function Header() {
@@ -14,43 +14,34 @@ function Header() {
         <img src={logo} alt="BrainFlix logo" className="header__logo" />
       </Link>
 
-      <div className="header__container">
-        <input
-          type="text"
-          placeholder="Search"
-          className="header__container__input"
+
+      <div className="header__container-two">
+      <input type="text" placeholder="Search" className="header__container-two__input"></input>
+      <img
+        src={profilePic}
+        alt="Profile Avatar"
+        className="header__container-two__picture"
         />
+        </div>
+
+
+
+
+
+
+
+      <div className="header__container">
         <Link to="/upload">
           <button className="header__container__button">
             <img
               src={uploadLogo}
               alt="upload"
-              className="header__container__button__upload"
-            />{" "}
+              className="header__container__button__icon"
+            />
             UPLOAD
           </button>
         </Link>
-
-        <img
-          src={profilePic}
-          alt="Profile Avatar"
-          className="header__container__avatar"
-        />
-        <img
-          src={searchLogo}
-          alt="search"
-          className="header__container__input__search"
-        />
-        <img
-          src={profilePic}
-          alt="Profile Avatar"
-          className="header__container__picture"
-        />
       </div>
-      <button className="header__button">
-        <img src={uploadLogo} alt="upload" className="header__button__upload" />{" "}
-        UPLOAD
-      </button>
     </header>
   );
 }
