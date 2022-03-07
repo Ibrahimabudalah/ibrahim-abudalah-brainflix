@@ -11,6 +11,22 @@
     padding-top: 2.6vh;
     padding-bottom: 1.8vh;
     margin: 0;
+    @include tablet {
+      font-size: 2rem;
+      padding-bottom: 0;
+    }
+    @include desktop {
+      width: 75%;
+      font-size: 2.5rem;
+      border-right: $mercury 0.13rem solid;
+      padding-top: 3.5vh;
+    }
+  }
+  &__channel {
+    font-size: 0.9rem;
+    @include desktop{
+      font-size: 1.1rem;
+    }
   }
   &__info {
     display: flex;
@@ -22,8 +38,24 @@
     @include tablet {
       border-top: 0;
     }
+    @include desktop {
+      width: 75%;
+      border-right: $mercury 0.13rem solid;
+      border-bottom: $mercury 0.13rem solid;
+    }
+    &__text {
+      color: $silver;
+    }
     &__icons {
       width: 6vw;
+      @include tablet {
+        width: 2.5vw;
+        padding-right: 1vw;
+      }
+      @include desktop {
+        width: 2vw;
+        padding-right: 0.8vw;
+      }
     }
     &__component {
       display: flex;
@@ -33,13 +65,25 @@
       &__likes {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        @include tablet {
+          padding-left: 2vw;
+          font-size: 0.9rem;
+        }
+        @include desktop {
+          padding-left: 0;
+          margin-right: 2vw;
+        }
       }
       &-one {
         @include tablet {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          width: 30vw;
+          width: 25vw;
+        }
+        @include desktop {
+          width: 17.5vw;
         }
       }
       &-two {

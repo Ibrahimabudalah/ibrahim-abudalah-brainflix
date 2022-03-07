@@ -4,4 +4,8 @@
 
 .list{
     padding-left: 5vw;
+    @include desktop{
+        width: 67.4%;
+        border-right: $mercury 0.13rem solid;
+    }
 }

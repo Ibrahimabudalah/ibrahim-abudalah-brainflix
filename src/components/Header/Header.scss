@@ -11,7 +11,10 @@
   align-items: center;
   @include tablet{
     flex-direction: row;
-    width: 100%;
+    width: auto;
+  }
+  @include desktop{
+    width: auto;
   }
   &__logo {
     width: 40vw;

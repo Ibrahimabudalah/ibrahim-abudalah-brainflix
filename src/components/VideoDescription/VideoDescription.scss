@@ -2,19 +2,25 @@
 @use "../../styles/partials/fonts" as *;
 @use "../../styles/partials/mixins" as *;
 
-
-.description{
-    padding-left: 4vw;
-    color: $brainflix-black;
-    width: 91%;
-    font-size: 0.776rem;
-    padding-top: 1vh;
-    @include tablet{
-        padding-left: 5vw;
-        font-size: 0.88rem;
+.description {
+  padding-left: 4vw;
+  color: $brainflix-black;
+  width: 91%;
+  font-size: 0.776rem;
+  padding-top: 1vh;
+  @include tablet {
+    padding-left: 5vw;
+    font-size: 0.88rem;
+  }
+  @include desktop {
+    width: 67.4%;
+    border-right: $mercury 0.13rem solid;
+  }
+  &__text {
+    @include desktop {
+      width: 96%;
+      font-size: 1.06rem;
+      margin: 0;
     }
-    @include desktop{
-        width: 60%;
-        font-size: 0.98rem;
-    }
+  }
 }
