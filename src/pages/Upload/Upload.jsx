@@ -1,45 +1,32 @@
 import React from "react";
 import "./Upload.scss";
+import { Link } from "react-router-dom";
 
 class Page extends React.Component {
-  state = {
-    title: "",
-    description: "",
-  };
-
-  handleSubmit = (e) => {
-    e.preventDefault();
-  };
-  handleSubmit = (e) => {
-    this.setState({
-      [e.target.name]: e.target.value
-    })
-  };
   render() {
     return (
       <div>
         <h2>Upload Video</h2>
         <h5>VIDEO THUMBNAIL</h5>
-        <form onSubmit={this.handleSubmit}>
+        <form>
           <h5>TITLE YOUR VIDEO</h5>
           <input
             type="text"
             placeholder="Add a title to your video"
             name="title"
-            onChange={this.handleSubmit}
-            value={this.state.title}
           />
           <h5>ADD A VIDEO DESCRIPTION</h5>
           <input
             type="text"
             placeholder="Add a description to your video"
             name="description"
-            onChange={this.handleSubmit}
-            value={this.state.description}
           />
-          <button onClick={this.handleSubmit}>PUBLISH</button>
+          <Link to="/" onClick={() => alert("Video successfully uploaded")}>
+            {" "}
+            PUBLISH{" "}
+          </Link>
         </form>
-        <p>CANCEL</p>
+        <Link>CANCEL</Link>
       </div>
     );
   }
