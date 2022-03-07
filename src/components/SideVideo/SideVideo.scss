@@ -2,29 +2,28 @@
 @use "../../styles/partials/fonts" as *;
 @use "../../styles/partials/mixins" as *;
 
-
-.videos{
-    padding-left: 5vw;
-    display: block;
-    &__container{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-bottom: 2.5vh;
-        &__image{
-            width: 35vw;
-            height: 10vh;
-            border-radius: 5%;
-        }
-        &__info{
-            color: $brainflix-black;
-            width: 55%;
-            &__title{
-                font-size: 0.7rem;
-            }
-            &__channel{
-                font-size: 0.6rem;
-            }
-        }
+.videos {
+  padding-left: 5vw;
+  display: block;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2.5vh;
+    &__image {
+      width: 35vw;
+      height: 10vh;
+      border-radius: 5%;
     }
+    &__info {
+      color: $brainflix-black;
+      width: 55%;
+      &__title {
+        font-size: 0.7rem;
+      }
+      &__channel {
+        font-size: 0.6rem;
+      }
+    }
+  }
 }

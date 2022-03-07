@@ -7,14 +7,14 @@
   margin-top: 2vh;
   width: 95%;
   display: flex;
-  @include desktop{
+  @include desktop {
     margin: 0;
   }
-  &__container{
+  &__container {
     width: 20%;
     padding-top: 2.3vh;
     padding-right: 2vw;
-    @include tablet{
+    @include tablet {
       padding-right: 0;
       width: 15%;
     }
@@ -24,36 +24,36 @@
       height: 2.25rem;
       border-radius: 50%;
     }
-    &__wrapper{
+    &__wrapper {
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
   }
-  &__container-two{
+  &__container-two {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     padding-left: 5vw;
-    @include tablet{
+    @include tablet {
       padding: 0;
     }
-    &__text{
+    &__text {
       color: $brainflix-black;
       margin: 0;
       font-size: 0.75rem;
-      @include tablet{
+      @include tablet {
         font-size: 0.88rem;
       }
     }
-    &__name{
+    &__name {
       color: $brainflix-black;
       font-size: 0.7rem;
-      @include tablet{
+      @include tablet {
         font-size: 0.88rem;
       }
     }
-    &__time{
+    &__time {
       color: $silver;
       font-size: 0.88rem;
     }

@@ -2,9 +2,7 @@ import React from "react";
 import "./Header.scss";
 import logo from "../../assets/logos/BrainFlix-logo.svg";
 import uploadLogo from "../../assets/icons/upload.svg";
-import searchLogo from "../../assets/icons/search.svg";
 import profilePic from "../../assets/images/Mohan-muruge.jpg";
-import upload from "../../pages/Upload/Upload";
 import { Link } from "react-router-dom";
 
 function Header() {
@@ -14,21 +12,18 @@ function Header() {
         <img src={logo} alt="BrainFlix logo" className="header__logo" />
       </Link>
 
-
       <div className="header__container-two">
-      <input type="text" placeholder="Search" className="header__container-two__input"></input>
-      <img
-        src={profilePic}
-        alt="Profile Avatar"
-        className="header__container-two__picture"
+        <input
+          type="text"
+          placeholder="Search"
+          className="header__container-two__input"
+        ></input>
+        <img
+          src={profilePic}
+          alt="Profile Avatar"
+          className="header__container-two__picture"
         />
-        </div>
-
-
-
-
-
-
+      </div>
 
       <div className="header__container">
         <Link to="/upload">
@@ -38,7 +33,7 @@ function Header() {
               alt="upload"
               className="header__container__button__icon"
             />
-            UPLOAD
+            UPLOAD{" "}
           </button>
         </Link>
       </div>

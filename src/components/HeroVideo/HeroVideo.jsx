@@ -1,9 +1,7 @@
-import React from 'react'
-import './HeroVideo.scss';
+import React from "react";
+import "./HeroVideo.scss";
 
-
-function Video({video}) {
-  // console.log(video);
+function Video({ video }) {
   return (
     <section className="hero">
       <video poster={video} controls className="hero__video"></video>
@@ -11,4 +9,4 @@ function Video({video}) {
   );
 }
 
-export default Video
+export default Video;

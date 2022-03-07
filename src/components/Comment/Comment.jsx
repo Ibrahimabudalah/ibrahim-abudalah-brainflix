@@ -2,7 +2,6 @@ import React from "react";
 import "./Comment.scss";
 
 function Comment({ comment }) {
-  // console.log(comment);
   const commentDate = new Date(parseInt(comment.timestamp));
   return (
     <div className="comment">

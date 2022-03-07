@@ -5,7 +5,6 @@ import likes from "../../assets/icons/likes.svg";
 
 function VideoInfo({ videoInfo }) {
   const videoDate = new Date(parseInt(videoInfo.timestamp));
-  // console.log(videos);
   return (
     <div className="video">
       <h1 className="video__title">{videoInfo.title}</h1>

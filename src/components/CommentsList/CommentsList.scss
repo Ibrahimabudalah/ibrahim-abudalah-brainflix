@@ -2,10 +2,10 @@
 @use "../../styles/partials/fonts" as *;
 @use "../../styles/partials/mixins" as *;
 
-.list{
-    padding-left: 5vw;
-    @include desktop{
-        width: 67.4%;
-        border-right: $mercury 0.13rem solid;
-    }
+.list {
+  padding-left: 5vw;
+  @include desktop {
+    width: 67.4%;
+    border-right: $mercury 0.13rem solid;
+  }
 }

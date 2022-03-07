@@ -3,20 +3,7 @@ import { Link } from "react-router-dom";
 import "./SideVideo.scss";
 
 function SideVideo({ video }) {
-  // console.log("SideVideo video", video);
-  // console.log("sidevideo eventHandler", eventHandler);
-  // const clickHandler = (e, id) => {
-  //   eventHandler(id);
-  // };
-  // /video.id
   return (
-    // <div
-    //   onClick={() => {
-    //     selectedVideo(key);
-    //   }}
-    //   // id={video.id}
-    //   // className="videos"
-    // >
     <Link to={`/videos/${video.id}`}>
       <div className="videos__container">
         <img

@@ -9,11 +9,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  @include tablet{
+  @include tablet {
     flex-direction: row;
     width: auto;
   }
-  @include desktop{
+  @include desktop {
     width: auto;
   }
   &__logo {
@@ -21,7 +21,7 @@
     max-height: 2.8vh;
     padding-top: 3vh;
     padding-bottom: 1vh;
-    @include tablet{
+    @include tablet {
       width: 18vw;
     }
   }
@@ -37,7 +37,7 @@
       border-radius: 0.3rem;
       background-color: $alabaster;
       padding-left: 5vw;
-      @include tablet{
+      @include tablet {
         width: 50%;
       }
     }
@@ -59,10 +59,10 @@
       border-radius: 0.3rem;
       display: flex;
       align-items: center;
-      &__icon{
+      &__icon {
         padding-right: 25vw;
       }
-      @include tablet{
+      @include tablet {
         width: 50%;
       }
     }

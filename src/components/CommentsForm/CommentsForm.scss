@@ -4,12 +4,12 @@
 
 .form {
   padding-left: 5vw;
-  @include tablet{
+  @include tablet {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
-  @include  desktop{
+  @include desktop {
     width: 67.4%;
     border-right: $mercury 0.13rem solid;
   }
@@ -19,7 +19,7 @@
     @include tablet {
       font-size: 0.85rem;
     }
-    @include desktop{
+    @include desktop {
       margin: 0;
       padding-top: 6vh;
       font-size: 1rem;
@@ -34,7 +34,7 @@
       align-items: center;
       justify-content: space-between;
     }
-    @include desktop{
+    @include desktop {
       padding-left: 1.2vw;
       padding-top: 3vh;
     }
@@ -53,10 +53,10 @@
         font-weight: 500;
         margin: 0.4vh;
         padding-bottom: 0.3vh;
-        @include tablet{
+        @include tablet {
           font-size: 0.88rem;
         }
-        @include desktop{
+        @include desktop {
           font-size: 1rem;
         }
       }
@@ -71,11 +71,11 @@
           padding-left: 3vw;
           color: $brainflix-black;
           font-size: 0.7rem;
-          @include tablet{
+          @include tablet {
             padding-left: 2vw;
             font-size: 0.88rem;
           }
-          @include desktop{
+          @include desktop {
             font-size: 1.1rem;
           }
         }
@@ -84,10 +84,11 @@
           padding-bottom: 0;
           width: 55vw;
         }
-        @include desktop{
+        @include desktop {
           width: 39vw;
         }
       }
+
       &__button {
         display: flex;
         align-items: center;
@@ -100,18 +101,20 @@
         @include tablet {
           display: none;
         }
-        @include desktop{
+        @include desktop {
           display: none;
         }
       }
     }
   }
+
   &__icon {
     padding-right: 15vw;
-    @include tablet{
+    @include tablet {
       padding-right: 2vw;
     }
   }
+
   &__button {
     display: none;
     @include tablet {
@@ -126,8 +129,7 @@
       margin-top: 2vh;
       margin-left: 3vw;
     }
-    @include desktop{
-      // width: 10vw;
+    @include desktop {
       margin-top: 3.2vh;
       padding-right: 5vw;
     }
