@@ -4,9 +4,17 @@
 
 
 .description{
-    padding-left: 5vw;
+    padding-left: 4vw;
     color: $brainflix-black;
     width: 91%;
-    font-size: 0.81rem;
+    font-size: 0.776rem;
     padding-top: 1vh;
+    @include tablet{
+        padding-left: 5vw;
+        font-size: 0.88rem;
+    }
+    @include desktop{
+        width: 60%;
+        font-size: 0.98rem;
+    }
 }
