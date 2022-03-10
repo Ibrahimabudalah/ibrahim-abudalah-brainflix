@@ -1,0 +1,147 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+
+.upload {
+  padding-left: 5vw;
+  padding-right: 5vw;
+  border-top: $mercury 0.12rem solid;
+  @include desktop {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+  &__header {
+    font-size: 1.4rem;
+    color: $brainflix-black;
+    padding-top: 2.5vh;
+    margin: 0;
+    @include tablet {
+      font-size: 2rem;
+      padding-top: 4vh;
+      padding-bottom: 4vh;
+      border-bottom: $mercury 0.12rem solid;
+      margin-bottom: 2vh;
+    }
+  }
+  &__container {
+    &__one {
+      @include desktop {
+        display: flex;
+      }
+      &__sub {
+        @include desktop {
+          border-bottom: $mercury 0.12rem solid;
+          height: 25.4vh;
+          width: 40%;
+          padding-right: 2vw;
+        }
+      }
+    }
+  }
+  &__subheaders {
+    font-size: 0.7rem;
+    color: $silver;
+    margin: 0;
+    padding-bottom: 1vh;
+    padding-top: 1.5vh;
+    @include tablet {
+      font-size: 0.75rem;
+    }
+  }
+  &__picture {
+    width: 100%;
+    border-radius: 3%;
+    @include tablet {
+      width: 50%;
+    }
+    @include desktop {
+      width: 96%;
+    }
+  }
+  &__form {
+    width: 95%;
+    &__title {
+      width: 100%;
+      height: 3vh;
+      background-color: $alabaster;
+      border: 0.12rem $mercury solid;
+      border-radius: 0.3rem;
+      padding-left: 2.5vw;
+      &::placeholder {
+        color: $brainflix-black;
+      }
+      @include desktop {
+        width: 95%;
+      }
+    }
+    &__description {
+      width: 100%;
+      background-color: $alabaster;
+      border: 0.12rem $mercury solid;
+      border-radius: 0.3rem;
+      padding-left: 2.5vw;
+      padding-top: 1vh;
+      padding-bottom: 7vh;
+      &::placeholder {
+        color: $brainflix-black;
+      }
+      @include desktop {
+        width: 95%;
+      }
+    }
+    &__container {
+      @include tablet {
+        width: 104%;
+        margin-top: 3vh;
+        border-top: $mercury 0.12rem solid;
+      }
+      @include desktop {
+        width: 100%;
+      }
+    }
+    &__button {
+      margin-top: 3vh;
+      margin-bottom: 4vh;
+      width: 105%;
+      height: 5vh;
+      border: 0.1rem $brainflix-blue solid;
+      border-radius: 0.3rem;
+      background-color: $brainflix-blue;
+      color: white;
+      display: flex;
+      align-items: center;
+      &__icon {
+        padding-right: 25vw;
+      }
+      @include tablet {
+        width: 22vw;
+        float: right;
+        &__icon {
+          padding-right: 3.5vw;
+        }
+      }
+      @include desktop {
+        width: 13vw;
+        &__icon{
+            padding-right: 2.5vw;
+        }
+      }
+    }
+    &__cancel {
+      color: $brainflix-blue;
+      padding-left: 35vw;
+      @include tablet {
+        float: left;
+        padding-top: 4.5vh;
+        margin-left: 17vw;
+      }
+      @include desktop {
+        margin: 0;
+        padding-left: 0;
+        float: right;
+        padding-right: 5vw;
+      }
+    }
+  }
+}

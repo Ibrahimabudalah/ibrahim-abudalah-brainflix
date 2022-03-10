@@ -1,32 +1,50 @@
 import React from "react";
 import "./Upload.scss";
+import uploadPicture from "../../assets/images/Upload-video-preview.jpg";
+import publishLogo from "../../assets/icons/publish.svg";
 import { Link } from "react-router-dom";
 
 class Page extends React.Component {
   render() {
     return (
-      <div>
-        <h2>Upload Video</h2>
-        <h5>VIDEO THUMBNAIL</h5>
-        <form>
-          <h5>TITLE YOUR VIDEO</h5>
-          <input
-            type="text"
-            placeholder="Add a title to your video"
-            name="title"
-          />
-          <h5>ADD A VIDEO DESCRIPTION</h5>
-          <input
-            type="text"
-            placeholder="Add a description to your video"
-            name="description"
-          />
-          <Link to="/" onClick={() => alert("Video successfully uploaded")}>
-            {" "}
-            PUBLISH{" "}
-          </Link>
-        </form>
-        <Link>CANCEL</Link>
+      <div className="upload">
+        <h2 className="upload__header">Upload Video</h2>
+
+        <div className="upload__container__one">
+          <div className="upload__container__one__sub">
+            <h5 className="upload__subheaders">VIDEO THUMBNAIL</h5>
+            <img src={uploadPicture} alt="upload" className="upload__picture" />
+          </div>
+          <form className="upload__form">
+            <h5 className="upload__subheaders">TITLE YOUR VIDEO</h5>
+            <input
+              type="text"
+              placeholder="Add a title to your video"
+              name="title"
+              className="upload__form__title"
+            />
+            <h5 className="upload__subheaders">ADD A VIDEO DESCRIPTION</h5>
+            <input
+              type="text"
+              placeholder="Add a description to your video"
+              name="description"
+              className="upload__form__description"
+            />
+            <div className="upload__form__container">
+              <button className="upload__form__button">
+                <img
+                  src={publishLogo}
+                  className="upload__form__button__icon"
+                  alt="upload"
+                />
+                PUBLISH
+              </button>
+              <Link to="/" className="upload__form__cancel">
+                CANCEL
+              </Link>
+            </div>
+          </form>
+        </div>
       </div>
     );
   }
