@@ -24,7 +24,6 @@ class Home extends Component {
 
   getAllVideos = () => {
     const videoId = this.props.match.params.id;
-    console.log(videoId);
     api.getAll().then((res) => {
       this.setState({
         videoList: res.data,
@@ -38,11 +37,10 @@ class Home extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    console.log(this.props.match);
     if (prevProps.match.params.id !== this.props.match.params.id) {
       this.getVideo(this.props.match.params.id || this.state.videoList[0].id);
-      console.log("update");
     }
+    window.scrollTo(0, 0);
   }
 
   render() {
