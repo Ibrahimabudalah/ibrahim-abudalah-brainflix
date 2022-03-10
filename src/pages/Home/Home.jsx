@@ -52,7 +52,7 @@ class Home extends Component {
       : videoList;
 
     if (!this.state.selectedVideo || !this.state.videoList) {
-      return <h1></h1>;
+      return <h1>Loading...</h1>;
     }
     return (
       <div>
