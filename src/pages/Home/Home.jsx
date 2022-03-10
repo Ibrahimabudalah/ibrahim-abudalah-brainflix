@@ -6,6 +6,7 @@ import VideoDescription from "../../components/VideoDescription/VideoDescription
 import CommentsForm from "../../components/CommentsForm/CommentsForm";
 import CommentsList from "../../components/CommentsList/CommentsList";
 import SideVideosList from "../../components/SideVideoList/SideVideoList";
+import "./Home.scss";
 
 class Home extends Component {
   state = {
