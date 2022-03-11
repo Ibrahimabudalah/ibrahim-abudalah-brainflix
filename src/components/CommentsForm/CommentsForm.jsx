@@ -8,7 +8,7 @@ function CommentsForm({ comments }) {
     <div className="form">
       <h5 className="form__header">{comments.length + " Comments"}</h5>
       <div className="form__container">
-        <img src={image} alt="" className="form__container__image" />
+        <img src={image} alt="avatar" className="form__container__image" />
         <div className="form__container__field">
           <h6 className="form__container__field__header">
             JOIN THE CONVERSATION
