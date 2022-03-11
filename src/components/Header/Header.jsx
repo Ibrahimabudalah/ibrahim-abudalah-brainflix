@@ -1,7 +1,5 @@
-import React from "react";
 import "./Header.scss";
 import logo from "../../assets/logos/BrainFlix-logo.svg";
-import uploadLogo from "../../assets/icons/upload.svg";
 import profilePic from "../../assets/images/Mohan-muruge.jpg";
 import { Link } from "react-router-dom";
 
@@ -12,31 +10,22 @@ function Header() {
         <img src={logo} alt="BrainFlix logo" className="header__logo" />
       </Link>
 
-      <div className="header__container-two">
+      <div className="header__container">
         <input
           type="text"
           placeholder="Search"
-          className="header__container-two__input"
+          className="header__container__input"
         ></input>
         <img
           src={profilePic}
           alt="Profile Avatar"
-          className="header__container-two__picture"
+          className="header__container__picture--mobile"
         />
       </div>
-
-      <div className="header__container">
-        <Link to="/upload">
-          <button className="header__container__button">
-            <img
-              src={uploadLogo}
-              alt="upload"
-              className="header__container__button__icon"
-            />
-            UPLOAD{" "}
-          </button>
-        </Link>
-      </div>
+      <Link to="/upload">
+        <button className="header__button">UPLOAD</button>
+      </Link>
+      <img src={profilePic} alt="avatar" className="header__avatar" />
     </header>
   );
 }
