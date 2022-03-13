@@ -3,9 +3,25 @@ import "./Upload.scss";
 import uploadPicture from "../../assets/images/Upload-video-preview.jpg";
 import publishLogo from "../../assets/icons/publish.svg";
 import { Link } from "react-router-dom";
+import axios from "axios";
+const { v4: uuid4 } = require("uuid");
 
-class Page extends React.Component {
-  render() {
+function Page({history}){
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    axios
+      .post("http://localhost:8080/videos", {
+        id: uuid4(),
+        title: e.target.title.value,
+        description: e.target.description.value,
+      })
+      .then((res) => {
+        console.log("video uploaded");
+        history.push(`/videos/${res.data.id}`)
+      });
+  };
+
     return (
       <div className="upload">
         <h2 className="upload__header">Upload Video</h2>
@@ -15,7 +31,7 @@ class Page extends React.Component {
             <h5 className="upload__subheaders">VIDEO THUMBNAIL</h5>
             <img src={uploadPicture} alt="upload" className="upload__picture" />
           </div>
-          <form className="upload__form">
+          <form className="upload__form" onSubmit={submitHandler}>
             <h5 className="upload__subheaders">TITLE YOUR VIDEO</h5>
             <input
               type="text"
@@ -32,11 +48,11 @@ class Page extends React.Component {
             />
             <div className="upload__form__container">
               <button className="upload__form__button">
-                <img
+                {/* <img
                   src={publishLogo}
                   className="upload__form__button__icon"
                   alt="upload"
-                />
+                /> */}
                 PUBLISH
               </button>
               <Link to="/" className="upload__form__cancel">
@@ -47,7 +63,6 @@ class Page extends React.Component {
         </div>
       </div>
     );
-  }
 }
 
 export default Page;

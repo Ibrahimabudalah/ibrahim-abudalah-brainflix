@@ -3,7 +3,9 @@ import "./CommentsForm.scss";
 import image from "../../assets/images/Mohan-muruge.jpg";
 import commentLogo from "../../assets/icons/add_comment.svg";
 
+
 function CommentsForm({ comments }) {
+  // console.log(comments);
   return (
     <div className="form">
       <h5 className="form__header">{comments.length + " Comments"}</h5>

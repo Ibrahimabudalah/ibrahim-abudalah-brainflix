@@ -108,33 +108,36 @@
       border: 0.1rem $brainflix-blue solid;
       border-radius: 0.3rem;
       background-color: $brainflix-blue;
+      background-image: url("../../assets/icons/publish.svg");
+      background-repeat: no-repeat;
+      background-position: 2vw;
       color: white;
       display: flex;
       align-items: center;
-      &__icon {
-        padding-right: 25vw;
-      }
+      justify-content: center;
       @include tablet {
         width: 22vw;
         float: right;
-        &__icon {
-          padding-right: 3.5vw;
-        }
+        background-position: 1vw;
       }
       @include desktop {
         width: 13vw;
-        &__icon{
-            padding-right: 2.5vw;
-        }
+        // &__icon{
+        //     padding-right: 2.5vw;
+        // }
       }
     }
     &__cancel {
       color: $brainflix-blue;
-      padding-left: 35vw;
+      display: flex;
+      justify-content: center;
+      padding-left: 5vw;
       @include tablet {
-        float: left;
+        // float: left;
+        justify-content: flex-end;
         padding-top: 4.5vh;
-        margin-left: 17vw;
+        padding-right: 5vw;
+        // margin-left: 37vw;
       }
       @include desktop {
         margin: 0;
