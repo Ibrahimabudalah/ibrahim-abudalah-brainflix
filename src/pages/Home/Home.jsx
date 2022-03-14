@@ -36,11 +36,11 @@ class Home extends Component {
     this.getAllVideos();
   }
 
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(prevProps) {
     if (prevProps.match.params.id !== this.props.match.params.id) {
       this.getVideo(this.props.match.params.id || this.state.videoList[0].id);
     }
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 0); //this is to make the page got back to the top after selecting a video
   }
 
   render() {
@@ -52,6 +52,8 @@ class Home extends Component {
     if (!this.state.selectedVideo || !this.state.videoList) {
       return <h1>Loading...</h1>;
     }
+    //the above if statement is to show a loading <h1> tag if the video cant be found and in between renders
+    
     return (
       <main className="home">
         <HeroVideo video={selectedVideo.image} />

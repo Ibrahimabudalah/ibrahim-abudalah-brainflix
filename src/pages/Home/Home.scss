@@ -1,25 +1,25 @@
 @use "../../styles/partials/global" as *;
 @use "../../styles/partials/mixins" as *;
 
-.home{
-    &__container{
-        &__left{
-            @include desktop{
-                width: 72.5%;
-            }
-        }
-        &__right{
-            padding-left: 5vw;
-            @include desktop{
-                width: 27.5%;
-                margin-right: 3vw;
-                padding-left: 0;
-            }
-        }
-        @include desktop{
-            display: flex;
-            // justify-content: space-around;
-            // width: 100%;
-        }
+.home {
+  &__container {
+    &__left {
+      @include desktop {
+        width: 72.5%;
+      }
     }
+
+    &__right {
+      padding-left: 5vw;
+      @include desktop {
+        width: 27.5%;
+        margin-right: 3vw;
+        padding-left: 0;
+      }
+    }
+
+    @include desktop {
+      display: flex;
+    }
+  }
 }

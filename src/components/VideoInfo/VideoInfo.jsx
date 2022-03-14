@@ -21,6 +21,7 @@ function VideoInfo({ videoInfo }) {
             <img src={views} alt="views" className="video__info__icons" />
             <p>{videoInfo.views}</p>
           </div>
+          
           <div className="video__info__component__likes">
             <img src={likes} alt="likes" className="video__info__icons" />
             <p>{videoInfo.likes}</p>

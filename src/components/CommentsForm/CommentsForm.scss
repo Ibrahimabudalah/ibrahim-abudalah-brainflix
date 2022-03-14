@@ -16,6 +16,7 @@
     display: flex;
     justify-content: space-between;
   }
+
   &__header {
     color: $brainflix-black;
     font-size: 0.75rem;
@@ -28,6 +29,7 @@
       font-size: 1rem;
     }
   }
+
   &__container {
     display: flex;
     justify-content: space-evenly;
@@ -42,12 +44,14 @@
       padding-top: 3vh;
       width: 95%;
     }
+
     &__image {
       max-height: 4rem;
       max-width: 4rem;
       margin-top: 1.5rem;
       clip-path: circle(35% at 40% 50%);
     }
+
     &__field {
       display: flex;
       flex-direction: column;
@@ -64,6 +68,7 @@
           font-size: 1rem;
         }
       }
+
       &__input {
         width: 65vw;
         font-size: 0.813rem;
@@ -85,6 +90,7 @@
             padding-left: 1.5vw;
           }
         }
+
         @include tablet {
           height: 5vh;
           padding-top: 0;
@@ -146,8 +152,6 @@
     @include desktop {
       margin-top: 3.2vh;
       background-position: 0.5vw;
-      // margin-left: 0vw;
-      // width: 40vw;
     }
   }
 }

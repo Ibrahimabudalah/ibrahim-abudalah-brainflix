@@ -9,7 +9,6 @@
     color: $silver;
     font-size: 0.8rem;
     font-weight: 400;
-    // margin-bottom: 1rem;
     @include tablet{
       width: 95%;
       font-size: 0.9rem;
@@ -20,9 +19,5 @@
       margin-top: 0.8vw;
       margin-bottom: 0;
     }
-  }
-  @include desktop{
-    // width: 25%;
-    // float: right;
   }
 }
