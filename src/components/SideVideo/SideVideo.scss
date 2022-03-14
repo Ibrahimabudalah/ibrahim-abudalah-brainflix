@@ -3,26 +3,69 @@
 @use "../../styles/partials/mixins" as *;
 
 .videos {
-  padding-left: 5vw;
+  // padding-left: 5vw;
   display: block;
   &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 2.5vh;
+    width: 95%;
+    height: 22.5vw;
+    @include tablet{
+      height: 11vw;
+      width: 40%;
+    }
+    @include desktop{
+      height: 8vw;
+      width: 100%;
+    }
     &__image {
-      width: 35vw;
-      height: 10vh;
+      // width: 33vw; //33vw
+      width: 33vw;
+      height: 18vw; //7vh
+      // height: 82%;
       border-radius: 5%;
+      object-fit:cover;
+      @include tablet{
+        width: 16.5vw;
+        min-width: 16.5vw;
+        height: 8.5vw;
+      }
+      @include desktop{
+        width: 10.5vw;
+        min-width: 10.5vw;
+        height: 6vw;
+      }
     }
     &__info {
       color: $brainflix-black;
       width: 55%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 18vw;
+      @include tablet{
+        height: 8.5vw;
+        width: 50%;
+      }
+      @include desktop{
+        padding-left: 1vw;
+        height: 6vw;
+      }
       &__title {
-        font-size: 0.7rem;
+        font-size: 0.75rem;
+        // width: 95%;
+        margin: 0;
+        @include tablet{
+          font-size: 0.81rem;
+        }
+        @include desktop{
+          font-size: 0.8rem;
+        }
       }
       &__channel {
-        font-size: 0.6rem;
+        font-size: 0.72rem;
+        margin: 0;
       }
     }
   }

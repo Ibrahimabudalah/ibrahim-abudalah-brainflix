@@ -2,11 +2,27 @@
 @use "../../styles/partials/fonts" as *;
 @use "../../styles/partials/mixins" as *;
 
-.list {
+.lisst {
   &__header {
+    border-top: $mercury 1px solid;
+    padding-top: 2vh;
     color: $silver;
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    padding-left: 5vw;
+    font-size: 0.8rem;
+    font-weight: 400;
+    // margin-bottom: 1rem;
+    @include tablet{
+      width: 95%;
+      font-size: 0.9rem;
+    }
+    @include desktop{
+      border-top: 0;
+      font-size: 1rem;
+      margin-top: 0.8vw;
+      margin-bottom: 0;
+    }
+  }
+  @include desktop{
+    // width: 25%;
+    // float: right;
   }
 }

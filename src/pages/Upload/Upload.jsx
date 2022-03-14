@@ -10,6 +10,7 @@ function Page({history}){
 
   const submitHandler = (e) => {
     e.preventDefault();
+    alert("Video Uploaded Successfully");
     axios
       .post("http://localhost:8080/videos", {
         id: uuid4(),

@@ -10,8 +10,11 @@
     justify-content: space-between;
   }
   @include desktop {
-    width: 67.4%;
-    border-right: $mercury 0.13rem solid;
+    width: 85.5%;
+    border-right: $mercury 1px solid;
+    padding-left: 5.8vw;
+    display: flex;
+    justify-content: space-between;
   }
   &__header {
     color: $brainflix-black;
@@ -37,6 +40,7 @@
     @include desktop {
       padding-left: 1.2vw;
       padding-top: 3vh;
+      width: 95%;
     }
     &__image {
       max-height: 4rem;
@@ -66,6 +70,7 @@
         background-color: $alabaster;
         border: 0.1rem $mercury solid;
         border-radius: 0.3rem;
+        padding-top: 3vw;
         padding-bottom: 20vw;
         &::placeholder {
           padding-left: 3vw;
@@ -77,27 +82,36 @@
           }
           @include desktop {
             font-size: 1.1rem;
+            padding-left: 1.5vw;
           }
         }
         @include tablet {
           height: 5vh;
+          padding-top: 0;
           padding-bottom: 0;
           width: 55vw;
         }
         @include desktop {
-          width: 39vw;
+          width: 35vw;
         }
       }
 
       &__button {
         display: flex;
         align-items: center;
-        height: 5vh;
+        justify-content: center;
+        height: 4vh;
         color: white;
         background-color: $brainflix-blue;
+        background-image: url("../../assets/icons/add_comment.svg");
+        background-repeat: no-repeat;
+        background-position: 2vw;
         border: 0.1rem $brainflix-blue solid;
         border-radius: 0.3rem;
         margin-top: 2vh;
+        &:hover {
+          background-color: $brainflix-darkBlue;
+        }
         @include tablet {
           display: none;
         }
@@ -105,13 +119,6 @@
           display: none;
         }
       }
-    }
-  }
-
-  &__icon {
-    padding-right: 15vw;
-    @include tablet {
-      padding-right: 2vw;
     }
   }
 
@@ -120,18 +127,27 @@
     @include tablet {
       display: flex;
       align-items: center;
+      justify-content: center;
       height: 5vh;
       width: 25vw;
       color: white;
       background-color: $brainflix-blue;
+      background-image: url("../../assets/icons/add_comment.svg");
+      background-repeat: no-repeat;
+      background-position: 1vw;
       border: 0.1rem $brainflix-blue solid;
       border-radius: 0.3rem;
       margin-top: 2vh;
       margin-left: 3vw;
     }
+    &:hover {
+      background-color: $brainflix-darkBlue;
+    }
     @include desktop {
       margin-top: 3.2vh;
-      padding-right: 5vw;
+      background-position: 0.5vw;
+      // margin-left: 0vw;
+      // width: 40vw;
     }
   }
 }

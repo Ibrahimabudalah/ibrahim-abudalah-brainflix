@@ -3,47 +3,62 @@
 @use "../../styles/partials/mixins" as *;
 
 .comment {
-  border-top: $mercury 0.1rem solid;
+  border-top: $mercury 1px solid;
   margin-top: 2vh;
   width: 95%;
   display: flex;
   @include desktop {
     margin: 0;
+    // padding-left: 5.8vw;
+    width: 100%;
   }
   &__container {
-    width: 20%;
-    padding-top: 2.3vh;
+    // width: 20%;
+    padding-top: 1.8vh;
     padding-right: 2vw;
     @include tablet {
-      padding-right: 0;
-      width: 15%;
+      // padding-right: 2vw;
+      // width: 15%;
     }
     &__avatar {
       background-color: $mercury;
       width: 2.25rem;
       height: 2.25rem;
       border-radius: 50%;
+      @include desktop{
+        margin-left: 1.8vw;
+      }
     }
     &__wrapper {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      padding-left: 2vw;
     }
   }
   &__container-two {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    padding-left: 5vw;
+    // padding-left: 5vw;
+    width: 100%;
     @include tablet {
       padding: 0;
     }
     &__text {
       color: $brainflix-black;
       margin: 0;
-      font-size: 0.75rem;
+      font-size: 0.79rem;
+      padding-left: 2vw;
       @include tablet {
-        font-size: 0.88rem;
+        font-size: 0.84rem;
+        line-height: 2.2vh;
+      }
+      @include desktop{
+        padding-bottom: 2vh;
+        font-size: 0.95rem;
+        width: 91%;
+        line-height: 2.5vh;
       }
     }
     &__name {
@@ -56,6 +71,10 @@
     &__time {
       color: $silver;
       font-size: 0.88rem;
+      @include desktop{
+        padding-right: 2vw;
+        font-size: 1rem;
+      }
     }
   }
 }

@@ -21,13 +21,14 @@ function CommentsForm({ comments }) {
             className="form__container__field__input"
           />
           <button className="form__container__field__button">
-            <img src={commentLogo} alt="comment" className="form__icon" />{" "}
+            {/* <img src={commentLogo} alt="comment" className="form__icon" />{" "} */}
             COMMENT
           </button>
         </div>
 
         <button className="form__button">
-          <img src={commentLogo} alt="comment" className="form__icon" /> COMMENT
+          {/* <img src={commentLogo} alt="comment" className="form__icon" />  */}
+          COMMENT
         </button>
       </div>
     </div>

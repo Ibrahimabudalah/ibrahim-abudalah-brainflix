@@ -5,7 +5,10 @@
 .list {
   padding-left: 5vw;
   @include desktop {
-    width: 67.4%;
-    border-right: $mercury 0.13rem solid;
+    width: 85.5%;
+    padding-left: 5.8vw;
+    padding-top: 3.5vh;
+    padding-bottom: 8vh;
+    border-right: $mercury 1px solid;
   }
 }

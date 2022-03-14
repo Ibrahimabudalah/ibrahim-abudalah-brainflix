@@ -22,6 +22,7 @@
       padding-bottom: 4vh;
       border-bottom: $mercury 0.12rem solid;
       margin-bottom: 2vh;
+      width: 99%;
     }
   }
   &__container {
@@ -32,7 +33,8 @@
       &__sub {
         @include desktop {
           border-bottom: $mercury 0.12rem solid;
-          height: 25.4vh;
+          // height: 17.4vw;
+          height: 25.1vh;
           width: 40%;
           padding-right: 2vw;
         }
@@ -53,10 +55,11 @@
     width: 100%;
     border-radius: 3%;
     @include tablet {
-      width: 50%;
+      width: 45vw;
     }
     @include desktop {
-      width: 96%;
+      // width: 96%;
+      width: 34vh;
     }
   }
   &__form {
@@ -70,6 +73,10 @@
       padding-left: 2.5vw;
       &::placeholder {
         color: $brainflix-black;
+      }
+      @include tablet{
+        padding-left: 1.5vw;
+        width: 101.5%;
       }
       @include desktop {
         width: 95%;
@@ -85,6 +92,10 @@
       padding-bottom: 7vh;
       &::placeholder {
         color: $brainflix-black;
+      }
+      @include tablet{
+        padding-left: 1.5vw;
+        width: 101.5%;
       }
       @include desktop {
         width: 95%;

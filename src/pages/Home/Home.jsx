@@ -53,14 +53,20 @@ class Home extends Component {
       return <h1>Loading...</h1>;
     }
     return (
-      <div>
+      <main className="home">
         <HeroVideo video={selectedVideo.image} />
-        <VideoInfo videoInfo={selectedVideo} />
-        <VideoDescription video={selectedVideo} />
-        <CommentsForm comments={selectedVideo.comments} />
-        <CommentsList comments={selectedVideo.comments} />
-        <SideVideosList list={filteredVideos} />
-      </div>
+        <div className="home__container">
+          <div className="home__container__left">
+            <VideoInfo videoInfo={selectedVideo} />
+            <VideoDescription video={selectedVideo} />
+            <CommentsForm comments={selectedVideo.comments} />
+            <CommentsList comments={selectedVideo.comments} />
+          </div>
+          <div className="home__container__right">
+            <SideVideosList list={filteredVideos} />
+          </div>
+        </div>
+      </main>
     );
   }
 }

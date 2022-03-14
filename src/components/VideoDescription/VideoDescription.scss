@@ -9,17 +9,22 @@
   font-size: 0.776rem;
   padding-top: 1vh;
   @include tablet {
+    width: 88%;
     padding-left: 5vw;
-    font-size: 0.88rem;
+    font-size: 0.85rem;
+    line-height: 2vh;
   }
   @include desktop {
-    width: 67.4%;
-    border-right: $mercury 0.13rem solid;
+    width: 85.5%;
+    border-right: $mercury 1px solid;
+    padding-left: 5.8vw;
+    padding-top: 3vh;
   }
   &__text {
     @include desktop {
-      width: 96%;
-      font-size: 1.06rem;
+      width: 97%;
+      line-height: 3vh;
+      font-size: 0.98rem;
       margin: 0;
     }
   }

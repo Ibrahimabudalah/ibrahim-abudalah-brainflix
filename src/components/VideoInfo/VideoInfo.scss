@@ -6,8 +6,13 @@
   color: $brainflix-black;
   padding-left: 5vw;
   padding-right: 5vw;
+  @include desktop{
+    padding-left: 5.8vw;
+    padding-right: 0;
+  }
   &__title {
     font-size: 1.5rem;
+    line-height: 1.9rem;
     padding-top: 2.6vh;
     padding-bottom: 1.8vh;
     margin: 0;
@@ -16,62 +21,86 @@
       padding-bottom: 0;
     }
     @include desktop {
-      width: 75%;
-      font-size: 2.5rem;
-      border-right: $mercury 0.13rem solid;
+      width: 93%;
+      font-size: 2.3rem;
+      border-right: $mercury 1px solid;
       padding-top: 3.5vh;
     }
   }
   &__channel {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     @include desktop {
-      font-size: 1.1rem;
+      font-size: 1rem;
+      margin-bottom: 0;
     }
   }
   &__info {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-top: $mercury 0.1rem solid;
-    border-bottom: $mercury 0.1rem solid;
+    border-top: $mercury 1px solid;
+    border-bottom: $mercury 1px solid;
     @include tablet {
       border-top: 0;
     }
     @include desktop {
-      width: 75%;
-      border-right: $mercury 0.13rem solid;
-      border-bottom: $mercury 0.13rem solid;
+      width: 93%;
+      border-right: $mercury 1px solid;
+      border-bottom: $mercury 1px solid;
     }
     &__text {
       color: $silver;
+      font-size: 0.8rem;
+      @include desktop{
+        font-size: 1rem;
+        margin-bottom: 0;
+      }
     }
     &__icons {
-      width: 6vw;
+      margin-right: 1.5vw;
       @include tablet {
         width: 2.5vw;
         padding-right: 1vw;
+        margin-right: 0;
       }
       @include desktop {
-        width: 2vw;
-        padding-right: 0.8vw;
+        width: 1.5vw;
+        padding-right: 0vw;
+        margin-right: 0.5vw;
       }
     }
     &__component {
       display: flex;
       flex-direction: row;
-      margin-left: 5vw;
       &__views,
       &__likes {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
+        margin-right: 7vw;
+        font-size: 0.8rem;
         @include tablet {
           padding-left: 2vw;
-          font-size: 0.9rem;
         }
         @include desktop {
-          padding-left: 0;
-          margin-right: 2vw;
+          padding-left: 1.2vw;
+          margin-right: 1vw;
+          font-size: 0.9rem;
+        }
+      }
+      &__likes{
+        margin-right: 12vw;
+        @include desktop{
+          margin-right: 3vw;
+          // padding-left: 1.2vw;
+        }
+        @include tablet{
+          margin: 0;
+        }
+      }
+      &__views{
+        @include tablet{
+          margin-right: 0vw;
         }
       }
       &-one {
@@ -79,10 +108,10 @@
           display: flex;
           align-items: center;
           justify-content: space-between;
-          width: 25vw;
+          width: 23vw;
         }
         @include desktop {
-          width: 17.5vw;
+          width: 16.5vw;
         }
       }
       &-two {
@@ -100,6 +129,10 @@
         }
         @include tablet {
           flex-direction: row;
+        }
+        @include desktop{
+          // justify-content: flex-end;
+          width: 29%;
         }
       }
     }
