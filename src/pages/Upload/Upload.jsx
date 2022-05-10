@@ -11,7 +11,7 @@ function Page({ history }) {
     alert("Video Uploaded Successfully");
     
     axios
-      .post("http://localhost:8080/videos", {
+      .post("https://brainflix-apii.herokuapp.com/videos", {
         id: uuid4(),
         title: e.target.title.value,
         description: e.target.description.value,
